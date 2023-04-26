@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/bootstrap-4.6.2/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-1.11.0.min.js"></script>
+    <script src="./js/bootstrap-4.6.2/js/bootstrap.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./node_modules/echarts-liquidfill/dist/echarts-liquidfill.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <!-- 头部模块 -->
+    <header>
+        <h1><span>国家近二十年灾害数据总览</span></h1>
+
+        <div style="position: absolute; padding-top: 0.1%;">
+            <ul class="nav justify-content-center">
+                <li class="nav-item" style="margin-left: 50px;">
+                    <a class="nav-link" href="index.html" style="border-radius: 5px;  background-color: aliceblue;">数据总览</a>
+                </li>
+                <li class="nav-item" style="margin-left: 40px;">
+                    <a class="nav-link" href="地震灾害.html">地震灾害</a>
+                </li>
+                <li class="nav-item" style="margin-left: 40px;"></li>
+                    <a class="nav-link" href="地质灾害.html">地质灾害</a>
+                </li>
+                <p style="margin-left: 220px;"><span>Overview of national disaster data</span></p>
+                <li class="nav-item" style="margin-left: 280px;">
+                    <a class="nav-link" href="自然灾害.html">自然灾害</a>
+                </li>
+                <li class="nav-item" style="margin-left: 80px;">
+                    <a class="nav-link" href="森林火灾.html">森林火灾</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="main">
+        <!-- top5 -->
+        <div class="analyse">
+            <div class="analyse-title">
+                <span>灾害情况分析</span>
+            </div>
+            <ul>
+                <li>
+                    <h5 style="font-size: 20px;">地质灾害次数</h5><br>
+                    <em style="font-size: 25px;">332765 次</em>
+                </li>
+                <li>
+                    <h5 style="font-size: 20px;">森林火灾次数</h5><br>
+                    <em style="font-size: 25px;">105806 次</em>
+                </li>
+                <li>
+                    <h5 style="font-size: 20px;">地震灾害次数</h5><br>
+                    <em style="font-size: 25px;">231 次</em>
+                </li>
+                <li>
+                    <h5 style="font-size: 20px;">自然灾害农作物受灾面积</h5><br>
+                    <em style="font-size: 25px;">289335.5 千公顷</em>
+                </li>
+            </ul>
+        </div>
+        <!-- 损失总额 -->
+        <div class="total">
+            <div class="data1">
+                <span>地质灾害直接经济损失</span>
+                <p>7460520</p>
+            </div>
+            <div class="data2">
+                <span>森林火灾其他损失款</span>
+                <p>236495.19</p>
+            </div>
+            <div class="data3">
+                <span>地质灾害直接经济损失</span>
+                <p>115773433.3</p>
+            </div>
+            <div class="data4">
+                <span>自然灾害直接经济损失</span>
+                <p>455169000</p>
+            </div>
+            <canvas class="rain"></canvas>
+            <canvas class="dashed"></canvas>
+            <div class="sphere">
+                <div class="sphere-bg"></div>
+                <div class="sum">
+                    <span>国家近二十年经济损失 万元</span>
+                    <p>578639448.49</p>
+                </div>
+            </div>
+            <div class="cicle3"></div>
+            <div class="cicle4"></div>
+            <div class="cicle5"></div>
+            <div class="cicle6"></div>
+            <div class="cicle7"></div>
+            <div class="cicle8">
+                <span>1.29%</span>
+                <p>地质灾害</p>
+            </div>
+            <div class="cicle9">
+                <span>0.04%</span>
+                <p>森林火灾</p>
+            </div>
+            <div class="cicle10">
+                <span>20.01%</span>
+                <p>地震灾害</p>
+            </div>
+            <div class="cicle11">
+                <span>78.66%</span>
+                <p>自然灾害</p>
+            </div>
+        </div>
+        <!-- 灾害情况分析 -->
+        <div class="disaster">
+            <div class="disaster-title">
+                <span>伤亡、受灾人口情况</span>
+            </div>
+            <div class="disaster-content">
+                <ul>
+                    <li>
+                        <div class="cicle"></div>
+                        <div class="li-content">
+                            <span>地质灾害</span>
+                            <span>15831 人次</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cicle"></div>
+                        <div class="li-content">
+                            <span>森林火灾</span>
+                            <span>1563 人次</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cicle"></div>
+                        <div class="li-content">
+                            <span>地震灾害</span>
+                            <span>486694 人次</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cicle"></div>
+                        <div class="li-content">
+                            <span>自然灾害</span>
+                            <span>289335.5 万人次</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="execution">
+                <div class="title">死亡情况</div>
+                <div class="cicle1"></div>
+                <div class="cicle2"></div>
+                <div class="waterChart1">
+                    <div class="chart-title">死亡人数</div>
+                    <div class="number">102156 人次</div>
+
+                </div>
+                <div class="waterChart2">
+                    <div class="chart-title">死亡占比</div>
+                    <div class="chart2"></div>
+                </div>
+            </div>
+            <div class="notification">
+                <span>新闻</span>
+            </div>
+            <div class="notification-url">
+                <p><a href="https://www.mee.gov.cn/ywgz/zcghtjdd/sthjzc/202211/t20221107_1002440.shtml">区域重大战略生态环境保护</a>
+                </p>
+                <p><a href="http://www.forestry.gov.cn/main/5462/20230413/155502218477371.html">森林防火 人人有责</a></p>
+                <p><a href="https://baijiahao.baidu.com/s?id=1740880879449034640&wfr=spider&for=pc">绿水青山就是金山银山</a></p>
+                <p><a href="http://www.cfej.net/news/hjkj/202208/t20220804_990815.shtml">呵护秦岭生态 展现自然之美</a></p>
+                <p><a href="http://news.jstv.com/a/20230327/167988469666.shtml">2022年自然灾害致全球经济损失1.88万亿元</a></p>
+                <p><a href="https://www.thepaper.cn/newsDetail_forward_22639160">一季度自然灾害造成472.2万人次受灾，39人遇难</a></p>
+                <p><a href="http://m.bjnews.com.cn/detail/168109715714893.html">一季度我国各种自然灾害造成超472万人次受灾，因灾死亡39人</a></p>
+                <p><a href="http://www.chinapower.com.cn/jnhb/zcdt/20230417/196422.html">工信部、国家发改委、生态环境部发布!</a></p>
+            </div>
+        </div>
+        <!-- 折线图 -->
+        <div class="lineChart">
+
+        </div>
+    </div>
+
+    <!-- 底部模块 -->
+    <div class="bottom">
+        <h5><span>数据状况</span></h5>
+    </div>
+</body>
+
+
+</html>
